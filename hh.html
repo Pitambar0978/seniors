@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshers & Farewell Gallery</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color:#f9f9f9; margin:0; padding:20px;">
+
+  <h2 style="text-align:center; color:#333;">🎉 Freshers & Farewell Gallery 🎓</h2>
+
+  <div style="text-align:center; margin:20px 0;">
+    <button onclick="showGallery('photos')" style="padding:10px 20px; margin:5px; border:none; border-radius:20px; background-color:#007bff; color:white; cursor:pointer;">Photos</button>
+    <button onclick="showGallery('videos')" style="padding:10px 20px; margin:5px; border:none; border-radius:20px; background-color:#007bff; color:white; cursor:pointer;">Videos</button>
+    <button onclick="showGallery('youtube')" style="padding:10px 20px; margin:5px; border:none; border-radius:20px; background-color:#007bff; color:white; cursor:pointer;">YouTube</button>
+  </div>
+
+  <!-- Photos Section -->
+  <div id="photos" style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
+    <img src="https://sarkariresult.com.cm/wp-content/uploads/2025/09/EMRS-Recruitment-2025.webp" style="width:300px; height:200px; border-radius:10px; object-fit:cover;">
+    <img src="https://via.placeholder.com/300x200?text=Farewell+2" style="width:300px; height:200px; border-radius:10px; object-fit:cover;">
+    <img src="https://via.placeholder.com/300x200?text=Event+3" style="width:300px; height:200px; border-radius:10px; object-fit:cover;">
+  </div>
+
+  <!-- Videos Section -->
+  <div id="videos" style="display:none; flex-wrap:wrap; justify-content:center; gap:15px;">
+    <video controls style="width:300px; height:200px; border-radius:10px;">
+      <source src="your-video1.mp4" type="video/mp4">
+    </video>
+    <video controls style="width:300px; height:200px; border-radius:10px;">
+      <source src="your-video2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- YouTube Section -->
+  <div id="youtube" style="display:none; flex-wrap:wrap; justify-content:center; gap:15px;">
+    <iframe width="300" height="200" src="https://youtu.be/iTME8r1koaM?si=71eZIimiZnMU36-D" style="border:none; border-radius:10px;" allowfullscreen></iframe>
+    <iframe width="300" height="200" src="https://youtu.be/iTME8r1koaM?si=71eZIimiZnMU36-D" style="border:none; border-radius:10px;" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    function showGallery(section) {
+      document.getElementById('photos').style.display = 'none';
+      document.getElementById('videos').style.display = 'none';
+      document.getElementById('youtube').style.display = 'none';
+      document.getElementById(section).style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>

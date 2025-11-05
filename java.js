@@ -123,3 +123,10 @@ createCountdown("count5", new Date(2025, 8, 3, 0, 0, 0).getTime()); // Dance & s
       modal.style.display = "none";
     }
   }
+  // gallery tabs
+    function showGallery(section) {
+      document.getElementById('photos').style.display = 'none';
+      document.getElementById('videos').style.display = 'none';
+      document.getElementById('youtube').style.display = 'none';
+      document.getElementById(section).style.display = 'flex';
+    }

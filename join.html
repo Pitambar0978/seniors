@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshers’ Party Registration Form</title>
+</head>
+<body style="font-family:Arial, sans-serif; background-color:#f6e1ee; margin:0; padding:20px;">
+
+  <h2 style="text-align:center; color:#003366;">🎉 Freshers’ Party Registration Form 🎓</h2>
+  <p style="text-align:center; color:#666;">Organized by Department of Computer Science, SNU</p>
+
+  <form id="freshersForm" 
+        style="max-width:600px; margin:30px auto; background:white; padding:25px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+
+    <!-- Full Name -->
+    <label style="font-weight:bold;">Full Name (As per University Record)🪪:</label><br>
+    <input type="text" name="fullname" placeholder="Enter your full name" 
+           style="width:100%; padding:10px; margin:8px 0 15px 0; border:1px solid #ccc; border-radius:5px;"><br>
+
+    <!-- Roll Number -->
+    <label style="font-weight:bold;">Roll Number 🔢</label><br>
+    <input type="text" name="roll" placeholder="Enter your roll number"
+           style="width:100%; padding:10px; margin:8px 0 15px 0; border:1px solid #ccc; border-radius:5px;"><br>
+
+    <!-- Email -->
+    <label style="font-weight:bold;">Email ID 🪪 or Contact Number 📱</label><br>
+    <input type="text" name="email" placeholder="Enter your email or contact number"
+           style="width:100%; padding:10px; margin:8px 0 15px 0; border:1px solid #ccc; border-radius:5px;"><br>
+
+    <!-- Semester -->
+    <label style="font-weight:bold;">Semester 📘 :</label><br>
+    <select name="semester" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; margin:8px 0 15px 0;">
+      <option value="">--Select--</option>
+      <option>Semester 1</option>
+      <option>Semester 2</option>
+      <option>Semester 3</option>
+    </select><br>
+
+    <!-- Excited for Freshers Party -->
+    <label style="font-weight:bold;">Are you excited for the Fresher’s Party 2025–2028? 🎭</label><br>
+    <select name="excited" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; margin:8px 0 15px 0;">
+      <option value="">--Select--</option>
+      <option>Absolutely Yes 🎉</option>
+      <option>Super Excited 😍</option>
+      <option>100% Ready for Fun 🕺</option>
+      <option>Can’t Wait to Dance 💃</option>
+    </select><br>
+
+    <!-- Excited For -->
+    <label style="font-weight:bold;">Which part are you most excited for? 🪩</label><br>
+    <select name="part" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; margin:8px 0 15px 0;">
+      <option value="">--Select--</option>
+      <option>Ramp Walk 👠</option>
+      <option>Fun Games 🎯</option>
+      <option>Singing & Stage Fun 🎤</option>
+      <option>Surprise Games & Fun Challenges 🎯</option>
+    </select><br>
+
+    <!-- Perform on Stage -->
+    <label style="font-weight:bold;">Would you like to perform on stage? 🎤</label><br>
+    <select name="perform" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; margin:8px 0 15px 0;">
+      <option value="">--Select--</option>
+      <option>Yes, I’d love to perform! 💃</option>
+      <option>Maybe, still deciding 🤔</option>
+      <option>No, I’ll just enjoy the show 😄</option>
+      <option>I’m too shy for the spotlight 🙈</option>
+    </select><br>
+
+    <!-- Mr/Miss Fresher Participation -->
+    <label style="font-weight:bold;">Would you like to participate in Mr. & Miss FresWell 2025? 🎤💃</label><br>
+    <select name="mrmiss" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; margin:8px 0 15px 0;">
+      <option value="">--Select--</option>
+      <option>Yes ☑️</option>
+      <option>No ❎</option>
+    </select><br>
+
+    <!-- Food Preference -->
+    <p style="font-weight:bold; background:#fff0d5; padding:8px; border-radius:5px;">Food Preference 🍱 (Veg / Non-Veg)</p>
+    <select name="food" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; margin:8px 0 15px 0;">
+      <option value="">--Select--</option>
+      <option>Vegetarian 🥦</option>
+      <option>Non-Vegetarian 🍗</option>
+    </select><br>
+
+    <!-- Expectations -->
+    <label style="font-weight:bold;">What are your expectations from the Fresher’s Party 2025–2028? 🎶</label><br>
+    <textarea name="expectation" rows="3" placeholder="Write your thoughts..." 
+              style="width:100%; padding:10px; margin:8px 0 15px 0; border:1px solid #ccc; border-radius:5px;"></textarea><br>
+
+    <!-- Remarks -->
+    <label style="font-weight:bold;">Feedback:</label><br>
+    <textarea name="remarks" rows="2" placeholder="Any additional comments..." 
+              style="width:100%; padding:10px; margin:8px 0 15px 0; border:1px solid #ccc; border-radius:5px;"></textarea><br>
+
+    <!-- Submit Button -->
+    <div style="text-align:center;">
+      <button type="button" onclick="submitForm()" 
+              style="background-color:#007bff; color:white; padding:10px 30px; border:none; border-radius:25px; cursor:pointer;">
+        Submit
+      </button>
+    </div>
+
+  </form>
+
+  <script>
+    function submitForm() {
+      const form = document.getElementById('freshersForm');
+      const inputs = form.querySelectorAll('input, select, textarea');
+
+      for (let field of inputs) {
+        if (field.value.trim() === '') {
+          alert("⚠️ Please fill all required fields before submitting!");
+          field.focus();
+          return false;
+        }
+      }
+
+      alert("🎉 Thank you for registering! Your response has been recorded.");
+      form.reset();
+    }
+  </script>
+
+</body>
+</html>
