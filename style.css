@@ -247,6 +247,7 @@ body {
             font-size:4.6rem;
             margin-bottom: 10px;
             color: red;
+            
             font-weight: bolder;
         }
        h1::after {
@@ -276,10 +277,25 @@ body {
             color: white;
             font-size: 20px;
         }
+        .border{
+            border: 2px solid rgb(10, 115, 243);
+            box-shadow: 0 4px 10px rgba(234, 3, 3, 0.4);
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            width: 80%;
+            margin-left: 110px;
+        }
         h2 {
-            color: #ff1493; /* Neon Pink */
-            font-family: 'Orbitron', sans-serif; /* Futuristic font */
+            color:red; /* Neon Pink */
+            font-family: agency fb; /* Futuristic font */
             margin-bottom: 10px;
+            
+        }
+        p{
+          color: rgb(251, 247, 247);
+          text-align: center;
+          font-size: 1.5rem;
         }
         ul {
             list-style: none;
@@ -287,15 +303,14 @@ body {
             
         }
         ul li {
-            background: linear-gradient(to right, rgb(239, 142, 142), rgb(240, 194, 108), rgb(235, 235, 118), rgb(155, 245, 155), rgb(144, 144, 241), rgb(206, 152, 245), rgb(240, 159, 240));
             margin: 5px 0;
             padding: 10px;
             border-radius: 4px;
-            animation: colorChanges 3s infinite;
-            font-weight: bolder;
+            text-decoration: underline;
             font-family:'Times New Roman', Times, serif;
             border-radius: 50px;
-            margin-left: 15px;
+            margin-left: 30%;
+            font-size: 1.5rem;
         }
         @keyframes colorChanges {
                0%   { color: red; } 
@@ -356,7 +371,10 @@ body {
 
 /* 📱 Responsive Styles */
 @media (max-width: 600px) {
-
+.border{
+    width: 95%;
+    margin-left: 10px;
+}
   .whatsapp-icon {
     width: 15px;
     height: 20px;
@@ -524,6 +542,7 @@ body {
             text-align: center;
             padding: 15px;
             margin-top: 20px;
+            
         }
 #contact a{
     text-decoration: none;
