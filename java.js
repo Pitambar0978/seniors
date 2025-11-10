@@ -102,3 +102,11 @@ document.querySelectorAll("#mobileMenu a").forEach(link => {
       document.getElementById('youtube').style.display = 'none';
       document.getElementById(section).style.display = 'flex';
     }
+
+    // Loader fade-out effect
+window.addEventListener("load", function() {
+  const loader = document.getElementById("loader");
+  setTimeout(() => {
+    loader.classList.add("fade-out");
+  }, 1000); // 1 second delay before fade out
+});
