@@ -110,3 +110,28 @@ window.addEventListener("load", function() {
     loader.classList.add("fade-out");
   }, 1000); // 1 second delay before fade out
 });
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+const stars = Array.from({ length: 100 }, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  r: Math.random() * 2,
+  d: Math.random() * 0.5,
+}));
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#00e0ff";
+  stars.forEach(s => {
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    ctx.fill();
+    s.y += s.d;
+    if (s.y > canvas.height) s.y = 0;
+  });
+  requestAnimationFrame(animate);
+}
+animate();
